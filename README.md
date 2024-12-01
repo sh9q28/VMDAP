@@ -1,7 +1,14 @@
 # VMDAP_Vascular_Morphology-Driven_Augmentation_Pipeline_for_Vessel_Segmentation
 
 We have open-sourced the code files presented in this paper for peer review. 
-For the convenience of reviewers, the folders in this repository are organized according to the 4 sections outlined in the paper: Background Restoration Block (BRB), Vessel Structure Feature Enhancement Block (VSFEB), Augmented Data Generation Network (ADGN), and DAcldice.
+We have organized this repository into the following main blocks:
+
+- [Background Restoration Block (BRB)](Background_Restoration_Block)
+- [Vessel Structure Feature Enhancement Block (VSFEB)](Vessel_Structure_Feature_Enhancement_Block)
+- [Augmented Data Generation Network (ADGN)](Augmented_Data_Generation_Network)
+- [DAclDice](DAclDice)
+
+For detailed information on each block, please visit the corresponding folder. Background Restoration Block (BRB), Vessel Structure Feature Enhancement Block (VSFEB), Augmented Data Generation Network (ADGN), and DAcldice.
 
 In the Background Restoration Block (BRB), we provide a background inpainting method based on the Drive dataset samples, which is used to generate background images without blood vessels.
 
