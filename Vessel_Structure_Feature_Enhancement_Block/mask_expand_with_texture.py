@@ -14,18 +14,13 @@ def BGR_to_RGB(cvimg):
 
 
 def bg_extract(img, label):
-    #pdb.set_trace()
     for i in range(len(label)):
         for j in range(len(label[0])):
             if label[i][j] == 255:
-                #pdb.set_trace()
                 img[i][j] = [0,0,0]
-                # img[i][j][0]= sum(sum(img[i-4:i+5,j-4:j+5,0]))/10
-                # img[i][j][1]= sum(sum(img[i-4:i+5,j-4:j+5,1]))/10
-                # img[i][j][2]= sum(sum(img[i-4:i+5,j-4:j+5,2]))/10
     return img
 
-def gamma(img, G = 1.0):        #G小于1，变暗；大于1，变亮。
+def gamma(img, G = 1.0):
     labe = []
     G = 1.0 / G
     for i in range(256):
@@ -90,6 +85,7 @@ for i in range(len(bg_files)):
 
         erode_k = random.sample([1,3],1)[0]
         kernel = np.ones((erode_k,erode_k),np.uint8)
+        label = cv2.erode(label, kernel)
 
         texture = cv2.Canny(gt, threshold1=1, threshold2=50)
         
