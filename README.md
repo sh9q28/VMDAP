@@ -1,5 +1,8 @@
 # VMDAP_Vascular_Morphology-Driven_Augmentation_Pipeline_for_Vessel_Segmentation
 
+We sincerely thank the reviewers for their time and thoughtful feedback. Your insights have greatly improved the quality of this work, and we hope the open-source code will be a valuable resource for future research.
+
+
 We have open-sourced the code files presented in this paper for peer review. 
 We have organized this repository into the following main blocks:
 
@@ -62,3 +65,5 @@ The DAclDice file contains the source code for the DAclDice Loss presented in th
 ```
 DAclDice/DAcldice.py
 ```
+
+Thank you again to the reviewers for your careful review and constructive comments. Your feedback has been invaluable, and I hope this open-source code will contribute to further advancements in the field.
