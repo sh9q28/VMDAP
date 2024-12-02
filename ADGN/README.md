@@ -5,6 +5,18 @@ See [INSTALL.md](INSTALL.md) for the installation of dependencies required.
 ## Training
 
 Modified the dataset rootpath in 
+```
+ADGN/VesselGen/Options/vessel_gen_former.yml
+```
+and run
+```
+sh train.sh
+```
+The training process uses Vessel Detail Enhancement Loss by default. You can also find the source code for this loss function VDE_Loss in the file
+
+```
+ADGN/basicsr/models/losses/losses.py
+```
 
 ## Demo
 
