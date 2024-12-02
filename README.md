@@ -10,10 +10,55 @@ We have organized this repository into the following main blocks:
 
 For detailed information on each block, please visit the corresponding folder. Background Restoration Block (BRB), Vessel Structure Feature Enhancement Block (VSFEB), Augmented Data Generation Network (ADGN), and DAcldice.
 
-In the Background Restoration Block (BRB), we provide a background inpainting method based on the Drive dataset samples, which is used to generate background images without blood vessels.
+##Background Restoration Block (BRB)
 
-In the Vessel Structure Feature Enhancement Block (VSFEB), we provide examples of generating new vessel mask images by combining new vessel backgrounds with new vessel masks. Notably, this block also includes code for generating VDGN training data.
+We provide a background inpainting method based on the Drive dataset samples. The training inputs and training labels of the Drive dataset, as specified in the paper, are prepared in the following folders.
 
-In the Augmented Data Generation Network (ADGN), we offer the code and training procedures for ADGN. For more details, please refer to the README file in the folder.
+```
+Background_Restoration_Block/train_input Background_Restoration_Block/train_label
+```
 
+You can synthesize the background with a vessel mask and background inpainting according to the following instructions.
+
+```
+cd Background_Restoration_Block
+python bg_with_mask.py
+```
+
+```
+python bg_inpainting.py
+```
+
+
+##Vessel Structure Feature Enhancement Block (VSFEB)
+
+We provide examples of generating new vessel mask images by combining new vessel backgrounds with new vessel masks. Notably, this block also includes code for generating VDGN training data.
+
+The data in the same-named subfolders of the Vessel Structure Feature Enhancement Block folder and the Background Restoration Block folder can be shared. To proceed with subsequent operations, you need to complete the background inpainting process and copy the relevant files into the Vessel Structure Feature Enhancement Block folder.
+
+After this, you can generate training data for ADGN based on the current vascular segmentation dataset using the following command.
+
+```
+cd Vessel_Structure_Feature_Enhancement_Block
+python inpainted_bg_with_texture_mask.py
+```
+
+After the ADGN training is completed, construct vascular mask images with new features as the input to ADGN in order to generate new vascular images using the following command.
+
+
+```
+python mask_expand_with_texture.py
+```
+
+
+##Augmented Data Generation Network (ADGN)
+
+We offer the code and training procedures for ADGN with proposed Vessel Detail Enhancement Loss. For more details, please refer to the README file in the folder.
+
+
+##DAclDice
 The DAclDice file contains the source code for the DAclDice Loss presented in the paper. To use it, you need to call the soft_dice_DAcldice class from the DAcldice.py file within the folder.
+
+```
+DAclDice/DAcldice.py
+```
