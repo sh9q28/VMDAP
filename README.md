@@ -3,8 +3,7 @@
 We sincerely thank the reviewers for their time and thoughtful feedback. Your insights have greatly improved the quality of this work, and we hope the open-source code will be a valuable resource for future research.
 
 
-We have open-sourced the code files presented in this paper for peer review. 
-We have organized this repository into the following main blocks:
+We have open-sourced the code files presented in this paper for peer review. The repository is organized into the following main blocks according to the different sections outlined in the paper:
 
 - [Background Restoration Block (BRB)](Background_Restoration_Block)
 - [Vessel Structure Feature Enhancement Block (VSFEB)](Vessel_Structure_Feature_Enhancement_Block)
@@ -66,4 +65,4 @@ The DAclDice file contains the source code for the DAclDice Loss presented in th
 DAclDice/DAcldice.py
 ```
 
-Thank you again to the reviewers for your careful review and constructive comments. Your feedback has been invaluable, and I hope this open-source code will contribute to further advancements in the field.
+Thank you again to the reviewers for your careful review and constructive comments. Your feedback has been invaluable, and we hope this open-source code will contribute to further advancements in the field.
