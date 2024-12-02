@@ -5,7 +5,7 @@ We have organized this repository into the following main blocks:
 
 - [Background Restoration Block (BRB)](Background_Restoration_Block)
 - [Vessel Structure Feature Enhancement Block (VSFEB)](Vessel_Structure_Feature_Enhancement_Block)
-- [Augmented Data Generation Network (ADGN)](ANGN)
+- [Augmented Data Generation Network (ADGN)](ADGN)
 - [DAclDice](DAclDice)
 
 For detailed information on each block, please visit the corresponding folder. Background Restoration Block (BRB), Vessel Structure Feature Enhancement Block (VSFEB), Augmented Data Generation Network (ADGN), and DAcldice.
